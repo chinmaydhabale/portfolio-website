@@ -24,7 +24,7 @@ const HeroSection = () => {
                 <span className='absolute bottom-[-21.5px] right-[25px] bg-[#282d33] p-[5px]'>"</span>
                 <span className='absolute bottom-[-33.5px] right-0 border border-t-0 border-white w-fit px-2 py-1'>- Dr. Who</span>
             </div>
-            <span className='hidden lg:block absolute w-24 h-16 bottom-[-10px] right-[-20px] border border-white w-fit px-2 py-1'></span>
+            <span className='hidden lg:block absolute w-24 h-16 bottom-[-10px] right-[-20px] border border-white px-2 py-1'></span>
         </div>
     )
 }
