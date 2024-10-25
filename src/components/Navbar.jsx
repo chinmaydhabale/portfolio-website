@@ -27,10 +27,10 @@ const Navbar = () => {
                 </div>
                 <div className='flex items-center gap-4'>
                     <ul className='flex items-center gap-6'>
-                        <li>#Home</li>
-                        <li>#Works</li>
-                        <li>#About</li>
-                        <li>#Contact</li>
+                        <li><span className='text-purple-500'>#</span>Home</li>
+                        <li><span className='text-purple-500'>#</span>Works</li>
+                        <li><span className='text-purple-500'>#</span>About</li>
+                        <li><span className='text-purple-500'>#</span>Contact</li>
                         <li className="relative">
                             <button
                                 className="flex items-center gap-1"
@@ -93,10 +93,10 @@ const Navbar = () => {
                 <div className=' w-full h-full flex flex-col gap-4 pb-4'>
                     <div className=' h-full pl-2'>
                         <ul className='grid grid-cols-1 p-2 gap-6'>
-                            <li>#Home</li>
-                            <li>#Works</li>
-                            <li>#About</li>
-                            <li>#Contact</li>
+                            <li><span className='text-purple-500'>#</span>Home</li>
+                            <li><span className='text-purple-500'>#</span>Works</li>
+                            <li><span className='text-purple-500'>#</span>About</li>
+                            <li><span className='text-purple-500'>#</span>Contact</li>
                             <li className="relative">
                                 <button
                                     className="flex items-center gap-1"
