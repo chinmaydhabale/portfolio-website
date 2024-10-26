@@ -3,16 +3,25 @@ import IMAGES from '../Images/Images'
 import { useState } from 'react'
 import { RxCross2 } from 'react-icons/rx'
 import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useLocation } from 'react-router-dom'
 const Navbar = () => {
 
     const [isOpen, setIsOpen] = useState(false)
     const [isOpenMenu, setIsOpenMenu] = useState(false)
+    
     const navigate = useNavigate()
+    
+    
+    const location = useLocation()
+    const [url, setUrl] = useState(location.pathname)
+
+
+
     const handleLanguageChange = (language) => {
         setIsOpen(false)
         console.log(language)
     }
+
 
 
 
@@ -28,10 +37,10 @@ const Navbar = () => {
                 </div>
                 <div className='flex items-center gap-4'>
                     <ul className='flex items-center gap-6'>
-                        <li className='cursor-pointer' onClick={() => navigate('/')}><span className='text-purple-500' >#</span>Home</li>
-                        <li className='cursor-pointer' onClick={() => navigate('/projects')}><span className='text-purple-500' >#</span>Works</li>
-                        <li className='cursor-pointer' onClick={() => navigate('/about')}><span className='text-purple-500' >#</span>About</li>
-                        <li className='cursor-pointer' onClick={() => navigate('/contact')}><span className='text-purple-500' >#</span>Contact</li>
+                        <li className={`cursor-pointer ${url === '/' ? 'text-white' : 'text-gray-400'}`} onClick={() => navigate('/')}><span className='text-purple-500' >#</span>Home</li>
+                        <li className={`cursor-pointer ${url === '/projects' ? 'text-white' : 'text-gray-400'}`} onClick={() => navigate('/projects')}><span className='text-purple-500' >#</span>Works</li>
+                        <li className={`cursor-pointer ${url === '/about' ? 'text-white' : 'text-gray-400'}`} onClick={() => navigate('/about')}><span className='text-purple-500' >#</span>About</li>
+                        <li className={`cursor-pointer ${url === '/contact' ? 'text-white' : 'text-gray-400'}`} onClick={() => navigate('/contact')}><span className='text-purple-500' >#</span>Contact</li>
                         <li className="relative">
                             <button
                                 className="flex items-center gap-1"
@@ -94,10 +103,10 @@ const Navbar = () => {
                 <div className=' w-full h-full flex flex-col gap-4 pb-4'>
                     <div className=' h-full pl-2'>
                         <ul className='grid grid-cols-1 p-2 gap-6'>
-                            <li><span className='text-purple-500'>#</span>Home</li>
-                            <li><span className='text-purple-500'>#</span>Works</li>
-                            <li><span className='text-purple-500'>#</span>About</li>
-                            <li><span className='text-purple-500'>#</span>Contact</li>
+                            <li className={`cursor-pointer ${url === '/' ? 'text-white' : 'text-gray-400'}`} onClick={() => navigate('/')}><span className='text-purple-500'>#</span>Home</li>
+                            <li className={`cursor-pointer ${url === '/projects' ? 'text-white' : 'text-gray-400'}`} onClick={() => navigate('/projects')}><span className='text-purple-500'>#</span>Works</li>
+                            <li className={`cursor-pointer ${url === '/about' ? 'text-white' : 'text-gray-400'}`} onClick={() => navigate('/about')}><span className='text-purple-500'>#</span>About</li>
+                            <li className={`cursor-pointer ${url === '/contact' ? 'text-white' : 'text-gray-400'}`} onClick={() => navigate('/contact')}><span className='text-purple-500'>#</span>Contact</li>
                             <li className="relative">
                                 <button
                                     className="flex items-center gap-1"
@@ -147,8 +156,8 @@ const Navbar = () => {
                 </div>
             )}
 
-            <p className='hidden md:block w-[2px] h-[200px] bg-white absolute top-0 left-[50px]'></p>
-            <div className='hidden md:block absolute left-[40px] top-[205px]'>
+            <p className='hidden md:block w-[3px] h-[200px] bg-gray-400 absolute top-0 left-[50px]'></p>
+            <div className='hidden md:block absolute left-[39px] top-[205px]'>
                 <div className='flex flex-col gap-4'>
                     <FaGithub size={24} />
                     <FaLinkedin size={24} />

@@ -7,7 +7,7 @@ import IMAGES from '../Images/Images'
 const Footer = () => {
     return (
         <div>
-            <hr className='border-t-2 border-white w-full mt-40' />
+            <hr className='border-t-2 border-gray-400 w-full mt-40' />
             <div className='flex md:justify-between flex-col md:flex-row items-center gap-5 p-4 md:w-[80%] mt-6 lg:w-[70%] mx-auto'>
 
                 <div className='flex flex-col text-center md:text-start gap-2'>

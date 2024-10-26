@@ -80,10 +80,10 @@ const AboutPage = () => {
                 <span className='hidden lg:block absolute top-[50%] left-[-20px] '>
                     <img src={IMAGES.dots} alt="dots" className='h-[50px] w-[80px]' />
                 </span>
+                <span className='hidden lg:block absolute w-24 h-36 bottom-[-50%] top-[30%] right-[-30px] border border-gray-400 px-2 py-1'></span>
                 <span className='hidden lg:block absolute bottom-[-40%] right-[-20px] '>
                     <img src={IMAGES.dots} alt="dots" className=' ' />
                 </span>
-                <span className='hidden lg:block absolute w-24 h-36 bottom-[-50%] top-[30%] right-[-30px] border border-white px-2 py-1'></span>
             </div>
 
 
@@ -129,7 +129,7 @@ const AboutPage = () => {
                 <span className='hidden lg:block absolute bottom-[0%] right-[-20px] '>
                     <img src={IMAGES.dots} alt="dots"  />
                 </span>
-                <span className='hidden lg:block absolute w-24 h-36 bottom-[-50%] top-[30%] left-[-30px] border border-white px-2 py-1'></span>
+                <span className='hidden lg:block absolute w-24 h-36 bottom-[-50%] top-[30%] left-[-30px] border border-gray-400 px-2 py-1'></span>
             </div>
 
             <Footer />
