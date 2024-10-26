@@ -46,7 +46,7 @@ const AboutPage = () => {
             <Navbar />
 
             {/* about me section */}
-            <div className='relative'>
+            <div className='relative md:px-4'>
 
                 <div className='flex flex-col md:mt-16 mt-6 w-[90%] md:w-[80%] lg:w-[70%] mx-auto md:mb-10 mb-6'>
                     <h1 className='text-2xl font-bold'><span className='text-purple-500'>/</span>about-me</h1>
@@ -67,7 +67,7 @@ const AboutPage = () => {
                                     <br />
                                     Transforming my creativity and knowledge into a websites has been my passion for over a year. I have been helping various clients to establish their presence online. I always strive to learn about the newest technologies and frameworks.
                                 </div>
-                                <button className='border border-purple-500 px-5 py-1 w-fit flex items-center gap-1'>Read more <FaLongArrowAltRight /></button>
+                                <button className='border border-purple-500 px-5 py-1 w-fit flex items-center gap-1' onClick={() => window.open('https://drive.google.com/file/d/1QJ5xSNN1O0ZeEOVLenkAKU5qy-LmVv3A/view?usp=sharing', "_blank")}>Resume <FaLongArrowAltRight /></button>
                             </div>
                         </div>
 
@@ -109,25 +109,25 @@ const AboutPage = () => {
             {/* fun facts section */}
             <div className='relative'>
                 <div className=' md:mt-40 mt-20 w-[90%] md:w-[80%] lg:w-[70%] mx-auto md:mb-10 mb-1'>
-                <div className="flex items-center justify-start">
-                    <h1 className="text-2xl font-bold bg-[#282d33] z-10 pr-2"><span className='text-purple-500'>#</span>my-fun-facts</h1>
-                </div>
-                <div className='flex flex-col md:flex-row md:justify-between gap-4 mt-10'>
-                    <div className='flex flex-wrap gap-4'>
-                        {funfacts.map((fact, index) => (
-                            <div key={index} className='border border-gray-500 p-2'>
-                                <p className='text-gray-500'>{fact}</p>
-                            </div>
-                        ))}
+                    <div className="flex items-center justify-start">
+                        <h1 className="text-2xl font-bold bg-[#282d33] z-10 pr-2"><span className='text-purple-500'>#</span>my-fun-facts</h1>
                     </div>
-                    <div className='hidden md:block w-full '>
-                        <img src={IMAGES.funfacts} alt="funfacts" />
+                    <div className='flex flex-col md:flex-row md:justify-between gap-4 mt-10'>
+                        <div className='flex flex-wrap gap-4'>
+                            {funfacts.map((fact, index) => (
+                                <div key={index} className='border border-gray-500 p-2'>
+                                    <p className='text-gray-500'>{fact}</p>
+                                </div>
+                            ))}
+                        </div>
+                        <div className='hidden md:block w-full '>
+                            <img src={IMAGES.funfacts} alt="funfacts" />
                         </div>
                     </div>
                 </div>
 
                 <span className='hidden lg:block absolute bottom-[0%] right-[-20px] '>
-                    <img src={IMAGES.dots} alt="dots"  />
+                    <img src={IMAGES.dots} alt="dots" />
                 </span>
                 <span className='hidden lg:block absolute w-24 h-36 bottom-[-50%] top-[30%] left-[-30px] border border-gray-400 px-2 py-1'></span>
             </div>

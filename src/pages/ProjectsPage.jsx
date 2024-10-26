@@ -30,7 +30,7 @@ const ProjectsPage = () => {
     return (
         <div>
             <Navbar />
-            <div className='mt-16 w-[90%] md:w-[80%] lg:w-[70%] mx-auto mb-10'>
+            <div className='mt-16 w-[90%] md:w-[80%] lg:w-[70%] mx-auto mb-10 md:px-4'>
                 <div>
                     <h1 className='text-2xl font-bold'><span className='text-purple-500'>/</span>projects</h1>
                     <p className='text-gray-500'>What i have built?</p>

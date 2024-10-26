@@ -8,10 +8,10 @@ const Navbar = () => {
 
     const [isOpen, setIsOpen] = useState(false)
     const [isOpenMenu, setIsOpenMenu] = useState(false)
-    
+
     const navigate = useNavigate()
-    
-    
+
+
     const location = useLocation()
     const [url, setUrl] = useState(location.pathname)
 
@@ -149,9 +149,15 @@ const Navbar = () => {
 
                     </div>
                     <div className='flex justify-center items-center gap-4'>
-                        <FaGithub size={24} />
-                        <FaLinkedin size={24} />
-                        <FaInstagram size={24} />
+                        <button className='cursor-pointer' onClick={() => window.open('https://github.com/chinmaydhabale', "_blank")}>
+                            <FaGithub size={24} />
+                        </button>
+                        <button className='cursor-pointer' onClick={() => window.open('https://www.linkedin.com/in/chinmay-dhabale-5b9296213/', "_blank")}>
+                            <FaLinkedin size={24} />
+                        </button>
+                        <button className='cursor-pointer' onClick={() => window.open('https://www.instagram.com/chinmay_dhabale_/', "_blank")}>
+                            <FaInstagram size={24} />
+                        </button>
                     </div>
                 </div>
             )}
@@ -159,9 +165,15 @@ const Navbar = () => {
             <p className='hidden md:block w-[3px] h-[200px] bg-gray-400 absolute top-0 left-[50px]'></p>
             <div className='hidden md:block absolute left-[39px] top-[205px]'>
                 <div className='flex flex-col gap-4'>
-                    <FaGithub size={24} />
-                    <FaLinkedin size={24} />
-                    <FaInstagram size={24} />
+                    <button className='cursor-pointer z-10' onClick={() => window.open('https://github.com/chinmaydhabale', "_blank")}>
+                        <FaGithub size={24} />
+                    </button>
+                    <button className='cursor-pointer z-10' onClick={() => window.open('https://www.linkedin.com/in/chinmay-dhabale-5b9296213/', "_blank")}>
+                        <FaLinkedin size={24} />
+                    </button>
+                    <button className='cursor-pointer z-10' onClick={() => window.open('https://www.instagram.com/chinmay_dhabale_/', "_blank")}>
+                        <FaInstagram size={24} />
+                    </button>
                 </div>
             </div>
         </div>

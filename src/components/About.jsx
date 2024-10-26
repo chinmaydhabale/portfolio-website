@@ -1,8 +1,12 @@
 import React from 'react'
 import { FaLongArrowAltRight } from 'react-icons/fa'
+import { useNavigate } from 'react-router-dom'
 import IMAGES from '../Images/Images'
 
 const About = () => {
+    const navigate = useNavigate();
+
+
     return (
         <div className='relative'>
             <div className="relative mt-16 w-[90%] md:w-[80%] lg:w-[70%] mx-auto mb-10">
@@ -28,7 +32,7 @@ const About = () => {
                                 <br />
                                 Transforming my creativity and knowledge into a websites has been my passion for over a year. I have been helping various clients to establish their presence online. I always strive to learn about the newest technologies and frameworks.
                             </div>
-                            <button className='border border-purple-500 px-5 py-1 w-fit flex items-center gap-1'>Read more <FaLongArrowAltRight /></button>
+                            <button className='border border-purple-500 px-5 py-1 w-fit flex items-center gap-1' onClick={() => navigate('/about')}>Read more <FaLongArrowAltRight /></button>
                         </div>
                     </div>
 
@@ -37,7 +41,7 @@ const About = () => {
                     </div>
                 </div>
             </div>
-            <img src={IMAGES.dots} alt="dots" className='hidden lg:block absolute w-[103px] h-[103px] bottom-0 right-0' />
+            <img src={IMAGES.dots} alt="dots" className='hidden lg:block absolute w-[80px] h-[90px] bottom-0 right-0' />
             <span className='hidden lg:block absolute w-24 h-28 bottom-[-50%] top-[50%] left-[-20px] border border-gray-400 px-2 py-1'></span>
         </div>
     )

@@ -1,6 +1,12 @@
 import React from 'react'
 import IMAGES from '../Images/Images'
+import { useNavigate } from 'react-router-dom'
+
+
 const HeroSection = () => {
+
+    const navigate = useNavigate();
+
     return (
         <div className='relative'>
             <div className='flex flex-col md:flex-row md:w-[80%] lg:w-[70%] mx-auto items-center gap-4 lg:gap-8 pt-4 md:pt-10 px-4'>
@@ -9,7 +15,7 @@ const HeroSection = () => {
                         Chinmay is a <span className='text-purple-500'>Full Stack Developer</span>
                     </h1>
                     <p className='text-gray-500 text-sm'>He Craft Responsive and User Friendly Websites Where Technology Meets Creativity</p>
-                    <button className='hidden md:block px-5 py-1 border border-purple-500 w-fit'>Contact me !!</button>
+                    <button className='hidden md:block px-5 py-1 border border-purple-500 w-fit' onClick={() => navigate('/contact')}>Contact me !!</button>
                 </div>
                 <div className='md:w-[50%]'>
                     <img src={IMAGES.HeroImage} alt="HeroImage" className='md:w-[469px] md:h-[386px] w-[420px] h-[350px]' />
