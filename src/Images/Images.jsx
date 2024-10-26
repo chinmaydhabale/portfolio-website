@@ -5,6 +5,7 @@ const IMAGES = {
     skills: new URL('./skills.png', import.meta.url).href,
     about: new URL('./aboutme.png', import.meta.url).href,
     dots: new URL('./dotimage.png', import.meta.url).href,
+    funfacts: new URL('./funfact.png', import.meta.url).href,
 }
 
 export default IMAGES

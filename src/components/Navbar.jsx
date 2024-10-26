@@ -3,11 +3,12 @@ import IMAGES from '../Images/Images'
 import { useState } from 'react'
 import { RxCross2 } from 'react-icons/rx'
 import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa'
+import { useNavigate } from 'react-router-dom'
 const Navbar = () => {
 
     const [isOpen, setIsOpen] = useState(false)
     const [isOpenMenu, setIsOpenMenu] = useState(false)
-
+    const navigate = useNavigate()
     const handleLanguageChange = (language) => {
         setIsOpen(false)
         console.log(language)
@@ -27,10 +28,10 @@ const Navbar = () => {
                 </div>
                 <div className='flex items-center gap-4'>
                     <ul className='flex items-center gap-6'>
-                        <li><span className='text-purple-500'>#</span>Home</li>
-                        <li><span className='text-purple-500'>#</span>Works</li>
-                        <li><span className='text-purple-500'>#</span>About</li>
-                        <li><span className='text-purple-500'>#</span>Contact</li>
+                        <li className='cursor-pointer' onClick={() => navigate('/')}><span className='text-purple-500' >#</span>Home</li>
+                        <li className='cursor-pointer' onClick={() => navigate('/projects')}><span className='text-purple-500' >#</span>Works</li>
+                        <li className='cursor-pointer' onClick={() => navigate('/about')}><span className='text-purple-500' >#</span>About</li>
+                        <li className='cursor-pointer' onClick={() => navigate('/contact')}><span className='text-purple-500' >#</span>Contact</li>
                         <li className="relative">
                             <button
                                 className="flex items-center gap-1"
