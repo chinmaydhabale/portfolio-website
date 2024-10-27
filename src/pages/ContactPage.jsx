@@ -15,9 +15,10 @@ const ContactPage = () => {
         e.preventDefault();
         emailjs.sendForm('service_phlrb7o', 'template_himn7sb', form.current, 'CLSibZgE7FrOVtqi_')
             .then((result) => {
-                console.log(result.text);
-                toast.success("Message sent successfully!")
-                form.current.reset();
+                if (result.text === "OK") {
+                    toast.success("Message sent successfully!")
+                    form.current.reset();
+                }
             }, (error) => {
                 console.log(error.text);
                 toast.error("An error occurred, please try again.")
