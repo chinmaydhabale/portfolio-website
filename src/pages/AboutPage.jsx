@@ -25,18 +25,18 @@ const AboutPage = () => {
         },
         {
             title: "Others",
-            skills: ["Axios", "Postman", "React-Router", "Redux-Toolkit"]
+            skills: ["Axios", "Postman", "React-Router", "Redux-Toolkit", "Bootstrap"]
         },
     ];
 
     const funfacts = [
         "I like winter more than summer",
         "I often bike with my friends",
-        "I like pizza and pasta",
-        "I was in Egypt, Poland and Turkey",
-        "My favorite movie is The Green Mile",
-        "I am still in school",
-        "I don’t have any siblings"
+        "I like maggie more than food",
+        "I live in Maharashtra",
+        "My favorite movie is The Pushpa",
+        "I completed my graduation in 2023",
+        "I am a big fan of MS Dhoni"
     ]
 
 
