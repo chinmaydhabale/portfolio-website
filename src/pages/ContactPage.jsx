@@ -6,6 +6,7 @@ import { MdEmail } from 'react-icons/md';
 import { FaInstagram, FaTwitter } from 'react-icons/fa';
 import emailjs from '@emailjs/browser';
 import IMAGES from '../Images/Images';
+import toast from 'react-hot-toast';
 
 const ContactPage = () => {
     const form = useRef();
@@ -15,10 +16,11 @@ const ContactPage = () => {
         emailjs.sendForm('service_phlrb7o', 'template_himn7sb', form.current, 'CLSibZgE7FrOVtqi_')
             .then((result) => {
                 console.log(result.text);
-                alert('Message sent successfully!');
+                toast.success("Message sent successfully!")
+                form.current.reset();
             }, (error) => {
                 console.log(error.text);
-                alert('An error occurred, please try again.');
+                toast.error("An error occurred, please try again.")
             });
     };
 
