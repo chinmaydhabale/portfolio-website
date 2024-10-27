@@ -67,7 +67,7 @@ const AboutPage = () => {
                                     <br />
                                     Transforming my creativity and knowledge into a websites has been my passion for over a year. I have been helping various clients to establish their presence online. I always strive to learn about the newest technologies and frameworks.
                                 </div>
-                                <button className='border border-purple-500 px-5 py-1 w-fit flex items-center gap-1' onClick={() => window.open('https://drive.google.com/file/d/1QJ5xSNN1O0ZeEOVLenkAKU5qy-LmVv3A/view?usp=sharing', "_blank")}>Resume <FaLongArrowAltRight /></button>
+                                <button className='border border-purple-500 px-5 py-1 w-fit flex items-center gap-1' onClick={() => window.open('https://drive.google.com/file/d/15BBk-xzqvoALsPKYOFVagr2-VO6uAy6p/view?usp=sharing', "_blank")}>Resume <FaLongArrowAltRight /></button>
                             </div>
                         </div>
 

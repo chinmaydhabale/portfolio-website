@@ -17,7 +17,7 @@ const Contacts = () => {
                     <div className=' text-gray-400 w-full md:w-[50%] '>
                         I’m interested in freelance opportunities. However, <br /> if you have other request or question, don’t <br /> hesitate to contact me.
                     </div>
-                    <div className='border border-gray-400 text-center w-full md:w-fit md:absolute md:right-0 mx-auto flex flex-col gap-2 p-4'>
+                    <div className='border border-gray-400 text-gray-400 text-center w-full md:w-fit md:absolute md:right-0 mx-auto flex flex-col gap-2 p-4'>
                         <h1 className='text-xl font-bold'>Contact me Here</h1>
                         <div className='flex gap-2 items-center justify-center'>
                             <IoMdCall />

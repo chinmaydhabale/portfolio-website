@@ -6,30 +6,19 @@ import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa'
 import { useNavigate, useLocation } from 'react-router-dom'
 const Navbar = () => {
 
-    const [isOpen, setIsOpen] = useState(false)
     const [isOpenMenu, setIsOpenMenu] = useState(false)
 
     const navigate = useNavigate()
 
 
     const location = useLocation()
-    const [url, setUrl] = useState(location.pathname)
-
-
-
-    const handleLanguageChange = (language) => {
-        setIsOpen(false)
-        console.log(language)
-    }
-
-
-
+    const url = location.pathname
 
 
     return (
         <div className='relative'>
             <div className='hidden md:flex justify-between items-center p-4 md:w-[80%] lg:w-[70%] mx-auto'>
-                <div className='flex items-center gap-2'>
+                <div className='flex items-center gap-2' onClick={() => navigate('/')}>
                     <img src={IMAGES.logo} alt="logo" className='w-[16px] h-[16px]' />
                     <h1 className='text-lg font-bold'>
                         CodeWithChinmay
@@ -41,44 +30,7 @@ const Navbar = () => {
                         <li className={`cursor-pointer ${url === '/projects' ? 'text-white' : 'text-gray-400'}`} onClick={() => navigate('/projects')}><span className='text-purple-500' >#</span>Works</li>
                         <li className={`cursor-pointer ${url === '/about' ? 'text-white' : 'text-gray-400'}`} onClick={() => navigate('/about')}><span className='text-purple-500' >#</span>About</li>
                         <li className={`cursor-pointer ${url === '/contact' ? 'text-white' : 'text-gray-400'}`} onClick={() => navigate('/contact')}><span className='text-purple-500' >#</span>Contact</li>
-                        <li className="relative">
-                            <button
-                                className="flex items-center gap-1"
-                                onClick={() => setIsOpen(!isOpen)}
-                            >
-                                ENG
-                                <svg
-                                    className={`w-4 h-4 transition-transform ${isOpen ? 'rotate-180' : ''}`}
-                                    fill="none"
-                                    stroke="currentColor"
-                                    viewBox="0 0 24 24"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth={2}
-                                        d="M19 9l-7 7-7-7"
-                                    />
-                                </svg>
-                            </button>
-                            {isOpen && (
-                                <div className="absolute right-0 mt-2 w-32 bg-white rounded-md shadow-lg py-1 z-10">
-                                    <button
-                                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 w-full text-left"
-                                        onClick={() => handleLanguageChange('hindi')}
-                                    >
-                                        Hindi
-                                    </button>
-                                    <button
-                                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 w-full text-left"
-                                        onClick={() => handleLanguageChange('marathi')}
-                                    >
-                                        Marathi
-                                    </button>
-                                </div>
-                            )}
-                        </li>
+                        <li className={`cursor-pointer ${url === '/blogs' ? 'text-white' : 'text-gray-400'}`} onClick={() => navigate('/blogs')}><span className='text-purple-500' >#</span>Blogs</li>
                     </ul>
                 </div>
             </div>
@@ -107,44 +59,7 @@ const Navbar = () => {
                             <li className={`cursor-pointer ${url === '/projects' ? 'text-white' : 'text-gray-400'}`} onClick={() => navigate('/projects')}><span className='text-purple-500'>#</span>Works</li>
                             <li className={`cursor-pointer ${url === '/about' ? 'text-white' : 'text-gray-400'}`} onClick={() => navigate('/about')}><span className='text-purple-500'>#</span>About</li>
                             <li className={`cursor-pointer ${url === '/contact' ? 'text-white' : 'text-gray-400'}`} onClick={() => navigate('/contact')}><span className='text-purple-500'>#</span>Contact</li>
-                            <li className="relative">
-                                <button
-                                    className="flex items-center gap-1"
-                                    onClick={() => setIsOpen(!isOpen)}
-                                >
-                                    ENG
-                                    <svg
-                                        className={`w-4 h-4 transition-transform ${isOpen ? 'rotate-180' : ''}`}
-                                        fill="none"
-                                        stroke="currentColor"
-                                        viewBox="0 0 24 24"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path
-                                            strokeLinecap="round"
-                                            strokeLinejoin="round"
-                                            strokeWidth={2}
-                                            d="M19 9l-7 7-7-7"
-                                        />
-                                    </svg>
-                                </button>
-                                {isOpen && (
-                                    <div className="absolute left-0 mt-2 w-32 bg-white rounded-md shadow-lg py-1 z-10">
-                                        <button
-                                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 w-full text-left"
-                                            onClick={() => handleLanguageChange('hindi')}
-                                        >
-                                            Hindi
-                                        </button>
-                                        <button
-                                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 w-full text-left"
-                                            onClick={() => handleLanguageChange('marathi')}
-                                        >
-                                            Marathi
-                                        </button>
-                                    </div>
-                                )}
-                            </li>
+                            <li className={`cursor-pointer ${url === '/blogs' ? 'text-white' : 'text-gray-400'}`} onClick={() => navigate('/blogs')}><span className='text-purple-500'>#</span>Blogs</li>
                         </ul>
 
                     </div>

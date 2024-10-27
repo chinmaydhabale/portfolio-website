@@ -21,7 +21,7 @@ const Skills = () => {
         },
         {
             title: "Others",
-            skills: ["Axios", "Postman", "React-Router", "Redux-Toolkit"]
+            skills: ["Axios", "Postman", "React-Router", "Redux-Toolkit", "Bootstrap"]
         },
     ];
 
